@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import { v4 as uuidv4 } from "uuid";
 import TodoItemsCategory from "./components/TodoItemsCategory.vue";
+import TheAddTodoItemCard from "./components/TheAddTodoItemCard.vue";
 
 const todoItems = ref([
   {
@@ -46,6 +47,7 @@ const todoItemsDoneCategoryTitle = computed(
   <header class="colored-header"></header>
   <main>
     <h1 class="title">TodoList</h1>
+    <TheAddTodoItemCard />
     <TodoItemsCategory :title="todoItemsNotDoneCategoryTitle" :todo-items="todoItemsNotDone"/>
     <TodoItemsCategory :title="todoItemsDoneCategoryTitle" :todo-items="todoItemsDone"/>
   </main>
